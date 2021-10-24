@@ -1,13 +1,21 @@
 NAME = megaphone
 
-FILE = $(wildcard *.cpp)
+FILES = $(wildcard *.cpp)
+O_FILES = $(FILES:.cpp=.o)
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-all:
-	@clang++ $(FLAGS) $(FILE) -o $(NAME)
+all: $(NAME)
+
+$(NAME): $(O_FILES)
+	@clang++ -g $(FLAGS) $(O_FILES) -o $(NAME)
+
+%.o: %.cpp
+	@clang++ -c $<
+
 clean:
-	@rm -rf $(NAME)
+	@rm -f $(O_FILES)
 fclean: clean
+	@rm -rf $(NAME)
 
 re: fclean all
 

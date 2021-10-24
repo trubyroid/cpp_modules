@@ -1,15 +1,22 @@
 NAME = phonebook
 
 FILES = $(wildcard *.cpp)
+HEADER = phone_book.hpp
+O_FILES = $(FILES:.cpp=.o)
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-all:
-	@clang++ $(FLAGS) $(FILES) -o $(NAME)
+all: $(NAME)
+
+$(NAME): $(O_FILES)
+	@clang++ -g $(FLAGS) $(O_FILES) -o $(NAME)
+
+%.o: %.cpp $(HEADER)
+	@clang++ -c $<
 
 clean:
-	@rm -rf $(NAME)
-
+	@rm -f $(O_FILES)
 fclean: clean
+	@rm -rf $(NAME)
 
 re: fclean all
 
