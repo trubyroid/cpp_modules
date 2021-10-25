@@ -1,6 +1,5 @@
 #include <iostream>
 #include <cctype>
-using namespace std;
 
 int main(int argc, char **argv)
 {
@@ -8,18 +7,18 @@ int main(int argc, char **argv)
 	int j;
 
 	if (argc == 1)
-		cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << endl;
+		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
 	else
 	{
 		while (argv[++i])
 		{
 			j = -1;
 			while (argv[i][++j] != '\0')
-				cout << (char)toupper(argv[i][j]);
+				std::cout << (char)toupper(argv[i][j]);
 			if (argv[i + 1] != nullptr)
-				cout << " ";
+				std::cout << " ";
 			else
-				cout << endl;
+				std::cout << std::endl;
 		}
 	}
 	return (0);

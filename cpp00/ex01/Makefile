@@ -1,7 +1,7 @@
 NAME = phonebook
 
 FILES = $(wildcard *.cpp)
-HEADER = phone_book.hpp
+HEADERS = $(wildcard *.hpp)
 O_FILES = $(FILES:.cpp=.o)
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
@@ -10,7 +10,7 @@ all: $(NAME)
 $(NAME): $(O_FILES)
 	@clang++ -g $(FLAGS) $(O_FILES) -o $(NAME)
 
-%.o: %.cpp $(HEADER)
+%.o: %.cpp $(HEADERS)
 	@clang++ -c $<
 
 clean:
