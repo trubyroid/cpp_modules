@@ -5,5 +5,4 @@ void Zombie::announce (void) {
 }
 
 Zombie::~Zombie (void) {
-	delete this;
 }

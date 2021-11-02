@@ -1,10 +1,11 @@
 #include "Zombie.hpp"
 
 int	main() {
-	Zombie *zombastik;
+	Zombie *zombies;
 	int N = 100;
 
-	zombastik = ZombieHorde(N, "Zombie №");
+	zombies = ZombieHorde(N, "Zombie №");
 	for (int i = 0; i < N; i++)
-		zombastik[i].announce();
+		zombies[i].announce();
+	delete[] zombies;
 }
