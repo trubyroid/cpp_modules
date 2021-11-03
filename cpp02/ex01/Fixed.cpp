@@ -14,9 +14,9 @@ Fixed::Fixed(const Fixed& copy) {
 	Fixed::operator=(copy);
 }
 
-Fixed& Fixed::operator= (const Fixed& old_obj) {
+Fixed& Fixed::operator= (const Fixed& param) {
 	std::cout << "Assignation operator called\n";
-	this->setRawBits(old_obj.getRawBits());
+	this->setRawBits(param.getRawBits());
 	return *this;
 }
 
