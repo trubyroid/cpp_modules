@@ -5,12 +5,12 @@
 #include <cmath>
 
 class Fixed {
-		int value;
+		int point_value;
 		static const int num_fractional_bits = 8;
 	public:
 		Fixed();
-		Fixed(const int num);
-		Fixed(const float num);
+		Fixed(const int new_value);
+		Fixed(const float new_value);
 		~Fixed();
 		Fixed(const Fixed& copy);
 		Fixed& operator=(const Fixed& old_obj);

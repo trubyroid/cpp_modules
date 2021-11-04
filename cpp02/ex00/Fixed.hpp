@@ -4,7 +4,7 @@
 #include <iostream>
 
 class Fixed {
-		int value;
+		int point_value;
 		static const int num_fractional_bits = 8;
 	public:
 		Fixed();

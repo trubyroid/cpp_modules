@@ -2,7 +2,7 @@
 
 Fixed::Fixed () {
 	std::cout << "Default constructor called\n";
-	this->value = 0;
+	this->point_value = 0;
 }
 
 Fixed::~Fixed () {
@@ -22,9 +22,9 @@ Fixed& Fixed::operator= (const Fixed& old_obj) {
 
 int Fixed::getRawBits (void) const {
 	std::cout << "getRawBits member function called\n";
-	return (this->value);
+	return (this->point_value);
 }
 
 void Fixed::setRawBits (int const raw) {
-	this->value = raw;
+	this->point_value = raw;
 }
