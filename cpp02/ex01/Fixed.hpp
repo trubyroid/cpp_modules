@@ -11,15 +11,17 @@ class Fixed {
 		Fixed();
 		Fixed(const int new_value);
 		Fixed(const float new_value);
-		~Fixed();
 		Fixed(const Fixed& copy);
-		Fixed& operator=(const Fixed& old_obj);
-		Fixed& operator<<(const Fixed& obj);
+		~Fixed();
+
 		float toFloat(void) const;
 		int	toInt(void) const;
-
 		int getRawBits (void) const;
 		void setRawBits (int const raw);
+		
+		Fixed& operator=(const Fixed& obj);
 };
+
+std::ostream& operator<<(std::ostream &out, const Fixed	&obj);
 
 #endif

@@ -74,9 +74,9 @@ BSP означает разделение двоичного пространс�
 • Следовательно, прототип функции: bool bsp (Point const a, Point const b, Point const c, Point const point) ;.
 Не забудьте сдать свою основную часть тестов, чтобы доказать, что ваш класс работает так, как задумано. 
 
+OUTPUTS:
 
-
-ex00:
+ex00.
 Default constructor called
 Copy constructor called
 Assignation operator called // <-- This line may be missing depending on your implementation
@@ -94,7 +94,7 @@ Destructor called
 Destructor called
 Destructor called
 
-ex01:
+ex01.
 Default constructor called
 Int constructor called
 Float constructor called
@@ -115,4 +115,12 @@ Destructor called
 Destructor called
 Destructor called
 Destructor called
-$>
+
+ex02.
+0
+0.00390625
+0.00390625
+0.00390625
+0.0078125
+10.1016
+10.1016
