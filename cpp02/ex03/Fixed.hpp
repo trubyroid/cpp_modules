@@ -21,7 +21,7 @@ class Fixed {
 		const static Fixed& min (const Fixed &a, const Fixed &b);
 		const static Fixed& max (const Fixed &a, const Fixed &b);
 
-		Fixed& operator =(const Fixed& obj);
+		Fixed& operator=(const Fixed& obj);
 
 		bool operator ==(const Fixed& obj);
 		bool operator !=(const Fixed& obj);
