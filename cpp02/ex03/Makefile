@@ -8,10 +8,12 @@ FLAGS = -Wall -Wextra -Werror -std=c++98
 all: $(NAME)
 
 $(NAME): $(O_FILES)
-	@clang++ -g $(FLAGS) $(O_FILES) -o $(NAME)
+	# @clang++ -g $(FLAGS) $(O_FILES) -o $(NAME)
+	g++ -g $(FLAGS) $(O_FILES) -o $(NAME)
 
 %.o: %.cpp $(HEADER)
-	@clang++ -c $<
+	# @clang++ -c $<
+	g++ -c $<
 
 clean:
 	@rm -f $(O_FILES)

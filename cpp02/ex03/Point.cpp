@@ -1,11 +1,18 @@
 #include "Point.hpp"
 
-Point::Point () {
-	Fixed x(0);
-	Fixed y(0);
+Point& Point::operator=(const Point& obj) {
+	Point new_point(obj.x.getRawBits(), obj.y.getRawBits());
+	return new_point;
 }
 
-Point::Point(const float X, const float Y) {
 
+float Point::getX() {
+	return (this->x.toFloat());
 }
 
+float Point::getY() {
+	return(this->y.toFloat());
+}
+
+Point::~Point() {
+}
