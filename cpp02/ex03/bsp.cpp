@@ -1,6 +1,6 @@
 #include "Point.hpp"
 
-bool bsp(Point a, Point b, Point c, Point point) {
+bool bsp(const Point a,const Point b, const Point c,const Point point) {
     //сделать входные данные const
 	float first;
     float second;

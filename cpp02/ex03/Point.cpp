@@ -6,11 +6,11 @@ Point& Point::operator=(const Point& obj) {
 }
 
 
-float Point::getX() {
+float Point::getX() const {
 	return (this->x.toFloat());
 }
 
-float Point::getY() {
+float Point::getY() const {
 	return(this->y.toFloat());
 }
 
