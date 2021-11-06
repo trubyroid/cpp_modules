@@ -6,6 +6,5 @@ int main() {
     Point c(5, 7);
     Point point(5, 5);
 
-    // std::cout << bsp(a, b, c, point) << std::endl;
-    bsp(a,b,c,point);
+    std::cout << bsp(a, b, c, point) << std::endl;
 }
