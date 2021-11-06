@@ -7,9 +7,9 @@ class Point {
 		Fixed const x;
 		Fixed const y;
 	public:
-		Point() : x(0), y(0) {}
-		Point(const float X, const float Y) : x(X), y(Y) {}
-		Point(const Point& copy) : x(copy.x), y(copy.y) {}
+		Point();
+		Point(const float X, const float Y);
+		Point(const Point& copy);
 		~Point();
 
 		Point& operator =(const Point& obj);

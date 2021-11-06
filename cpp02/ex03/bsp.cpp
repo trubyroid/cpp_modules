@@ -1,7 +1,6 @@
 #include "Point.hpp"
 
 bool bsp(const Point a,const Point b, const Point c,const Point point) {
-    //сделать входные данные const
 	float first;
     float second;
     float third;

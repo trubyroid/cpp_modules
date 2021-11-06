@@ -1,4 +1,4 @@
-NAME = BSP
+NAME = bsp
 
 FILES = $(wildcard *.cpp)
 HEADER = $(wildcard *.hpp)
@@ -8,12 +8,10 @@ FLAGS = -Wall -Wextra -Werror -std=c++98
 all: $(NAME)
 
 $(NAME): $(O_FILES)
-	# @clang++ -g $(FLAGS) $(O_FILES) -o $(NAME)
-	g++ -g $(FLAGS) $(O_FILES) -o $(NAME)
+	@clang++ -g $(FLAGS) $(O_FILES) -o $(NAME)
 
 %.o: %.cpp $(HEADER)
-	# @clang++ -c $<
-	g++ -c $<
+	@clang++ -c $<
 
 clean:
 	@rm -f $(O_FILES)
