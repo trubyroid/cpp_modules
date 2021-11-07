@@ -1,7 +1,7 @@
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap() {
-	std::cout << "Unknown fighter appeared on the battlefield, but he too weak to participate the battle!\n";
+	std::cout << "Unknown fighter appeared on the battlefield, but he's too weak to participate the battle!\n";
 	name = "Unknown fighter";
 	health = 1;
 	energy = 0;
@@ -17,7 +17,7 @@ ClapTrap::ClapTrap(std::string str) {
 }
 
 ClapTrap::ClapTrap(const ClapTrap& copy) {
-	std::cout << copy.name << " called his clone!\n";
+	std::cout << copy.name << " invited his clone!\n";
 	name = "Clone " + copy.name;
 	health = copy.health;
 	energy = copy.energy;
@@ -29,7 +29,7 @@ ClapTrap::~ClapTrap () {
 }
 
 ClapTrap& ClapTrap::operator=(const ClapTrap &obj) {
-	std::cout << "From now on " << name << " has the same specifications as " << obj.name << "!\n";
+	std::cout << name << " steal the specifications from " << obj.name << "!\n";
 	health = obj.health;
 	energy = obj.energy;
 	damage = obj.damage;
@@ -46,7 +46,7 @@ void ClapTrap::attack(std::string const &target) {
 }
 void ClapTrap::takeDamage(unsigned int amount) {
 	if (amount >= health) {
-		std::cout << this->name << " take damage! " << amount << " HP lost. He's lose!\n";
+		std::cout << this->name << " take damage! " << amount << " HP lost. He's fallen! He's lose!\n";
 		health = 0;
 	}
 	else {

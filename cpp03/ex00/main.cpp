@@ -2,7 +2,6 @@
 
 int main() {
 	ClapTrap dino("Godzilla"), gorilla("King-Kong");
-	ClapTrap unknown;
 	std::cout << std::endl;
 	dino.attack(gorilla.getName());
 	gorilla.takeDamage(dino.getDamage());
@@ -14,6 +13,7 @@ int main() {
 	monkey.attack(dino.getName());
 	dino.takeDamage(monkey.getDamage());
 	std::cout << std::endl;
+	ClapTrap unknown;
 	unknown = dino;
 	unknown.attack(gorilla.getName());
 	unknown.attack(gorilla.getName());
@@ -27,9 +27,9 @@ int main() {
 	unknown.attack(gorilla.getName());
 	gorilla.takeDamage(unknown.getDamage());
 	std::cout << std::endl;
-	monkey.attack(dino.getName());
-	dino.takeDamage(monkey.getDamage());
 	monkey.attack(unknown.getName());
 	unknown.takeDamage(monkey.getDamage());
+	monkey.attack(dino.getName());
+	dino.takeDamage(monkey.getDamage());
 	std::cout << std::endl;
 }
