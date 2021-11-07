@@ -17,8 +17,8 @@ ClapTrap::ClapTrap(std::string str) {
 }
 
 ClapTrap::ClapTrap(const ClapTrap& copy) {
-	std::cout << copy.name << " invited his clone!\n";
-	name = "Clone " + copy.name;
+	std::cout << copy.name << " invited his brother!\n";
+	name = "Brother of " + copy.name;
 	health = copy.health;
 	energy = copy.energy;
 	damage = copy.damage;
@@ -46,7 +46,7 @@ void ClapTrap::attack(std::string const &target) {
 }
 void ClapTrap::takeDamage(unsigned int amount) {
 	if (amount >= health) {
-		std::cout << this->name << " take damage! " << amount << " HP lost. He's fallen! He's lose!\n";
+		std::cout << this->name << " take damage! " << amount << " HP lost. He's defeated!\n";
 		health = 0;
 	}
 	else {

@@ -7,7 +7,7 @@ int main() {
 	gorilla.takeDamage(dino.getDamage());
 	gorilla.attack(dino.getName());
 	dino.takeDamage(gorilla.getDamage());
-	std::cout << std::endl;
+	std::cout << "They're confused...\n" << std::endl;
 	ClapTrap monkey(gorilla);
 	monkey.setDamage(5);
 	monkey.attack(dino.getName());
