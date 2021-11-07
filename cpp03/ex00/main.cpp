@@ -27,6 +27,9 @@ int main() {
 	unknown.attack(gorilla.getName());
 	gorilla.takeDamage(unknown.getDamage());
 	std::cout << std::endl;
+	monkey.beRepaired(1);
+	monkey.beRepaired(10);
+	std::cout << std::endl;
 	monkey.attack(unknown.getName());
 	unknown.takeDamage(monkey.getDamage());
 	monkey.attack(dino.getName());

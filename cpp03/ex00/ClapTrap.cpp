@@ -44,6 +44,7 @@ void ClapTrap::attack(std::string const &target) {
 	else
 		std::cout << name << " has not enough energy to attack.\n";
 }
+
 void ClapTrap::takeDamage(unsigned int amount) {
 	if (amount >= health) {
 		std::cout << this->name << " take damage! " << amount << " HP lost. He's defeated!\n";
@@ -54,12 +55,17 @@ void ClapTrap::takeDamage(unsigned int amount) {
 		health -= amount;
 	}
 }
+
 void ClapTrap::beRepaired(unsigned int amount) {
 	if (energy < MAX_ENERGY) {
-		std::cout << name << " be repaired!" << amount << " EP restored.\n";
 		energy += amount;
-		if (energy > MAX_ENERGY)
+		if (energy > MAX_ENERGY) {
+			std::cout << name << " replenished the energy reserve! His EP is 10!\n";
 			energy = MAX_ENERGY;
+		}
+		else {
+			std::cout << name << " be repaired! " << amount << " EP restored.\n";
+		}
 	}
 	else {
 		std::cout << name << " couldn't be repaired! He already has maximum EP.\n";
