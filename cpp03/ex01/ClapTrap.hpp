@@ -3,10 +3,9 @@
 
 # include <iostream>
 # include <string>
-# define MAX_ENERGY 10
-# define MAX_HEALTH 10
 
 class ClapTrap {
+	protected:
 		std::string name;
 		int		health;
 		int		energy;
@@ -19,8 +18,6 @@ class ClapTrap {
 
 		ClapTrap& operator = (const ClapTrap& obj);
 
-		void attack(std::string const &target);
-		void takeDamage(unsigned int amount);
 		void beRepaired(unsigned int amount);
 
 		std::string getName(void);
@@ -32,6 +29,8 @@ class ClapTrap {
 		void setEnergy(int value);
 		void setDamage(int value);
 
+		virtual void attack(std::string const &target);
+		virtual void takeDamage(unsigned int amount);
 };
 
 #endif

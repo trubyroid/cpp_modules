@@ -1,15 +1,17 @@
 #include "ClapTrap.hpp"
+# define MAX_ENERGY 10
+# define MAX_HEALTH 10
 
 ClapTrap::ClapTrap() {
-	std::cout << "Unknown fighter appeared on the battlefield, but he's too weak to participate the battle!\n";
-	name = "Unknown fighter";
+	std::cout << "Unknown ClapTrap appeared on the battlefield, but he's too weak to participate the battle!\n";
+	name = "Unknown Clap";
 	health = 1;
 	energy = 0;
 	damage = 0;
 }
 
 ClapTrap::ClapTrap(std::string str) {
-	std::cout << str << " appeared on the battlefield!\n";
+	std::cout << "ClapTrap " << str << " appeared on the battlefield!\n";
 	this->name = str;
 	this->health = MAX_HEALTH;
 	this->energy = MAX_ENERGY;
@@ -17,7 +19,7 @@ ClapTrap::ClapTrap(std::string str) {
 }
 
 ClapTrap::ClapTrap(const ClapTrap& copy) {
-	std::cout << copy.name << " invited his brother!\n";
+	std::cout << "ClapTrap " << copy.name << " invited his brother!\n";
 	name = "Brother of " + copy.name;
 	health = copy.health;
 	energy = copy.energy;
@@ -25,11 +27,11 @@ ClapTrap::ClapTrap(const ClapTrap& copy) {
 }
 
 ClapTrap::~ClapTrap () {
-	std::cout << name << " leave the battlefield.\n";
+	std::cout << "ClapTrap " << name << " leave the battlefield.\n";
 }
 
 ClapTrap& ClapTrap::operator=(const ClapTrap &obj) {
-	std::cout << name << " steal the specifications from " << obj.name << "!\n";
+	std::cout << "ClapTrap " << name << " steal the specifications from ClapTrap " << obj.name << "!\n";
 	health = obj.health;
 	energy = obj.energy;
 	damage = obj.damage;
@@ -38,7 +40,7 @@ ClapTrap& ClapTrap::operator=(const ClapTrap &obj) {
 
 void ClapTrap::attack(std::string const &target) {
 	if (energy > 0) {
-		std::cout << name << " attack " << target << ", causing " << damage << " points of damage. " << name << " lost 1 EP.\n";
+		std::cout << "ClapTrap " << name << " attack " << target << ", causing " << damage << " points of damage. ClapTrap " << name << " lost 1 EP.\n";
 		energy--;
 	}
 	else
@@ -47,11 +49,11 @@ void ClapTrap::attack(std::string const &target) {
 
 void ClapTrap::takeDamage(unsigned int amount) {
 	if (amount >= health) {
-		std::cout << this->name << " take damage! " << amount << " HP lost. He's defeated!\n";
+		std::cout << "ClapTrap " << this->name << " take damage! " << amount << " HP lost. He's defeated!\n";
 		health = 0;
 	}
 	else {
-		std::cout << this->name << " take damage! " << amount << " HP lost.\n";
+		std::cout << "ClapTrap " << this->name << " take damage! " << amount << " HP lost.\n";
 		health -= amount;
 	}
 }
