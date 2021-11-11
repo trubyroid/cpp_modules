@@ -1,6 +1,7 @@
 #include "ClapTrap.hpp"
 # define MAX_ENERGY 10
 # define MAX_HEALTH 10
+# define DEFAULT_DAMAGE 0
 
 ClapTrap::ClapTrap() {
 	std::cout << "Unknown ClapTrap appeared on the battlefield, but he's too weak to participate the battle!\n";
@@ -15,7 +16,7 @@ ClapTrap::ClapTrap(std::string str) {
 	this->name = str;
 	this->health = MAX_HEALTH;
 	this->energy = MAX_ENERGY;
-	this->damage = 0;
+	this->damage = DEFAULT_DAMAGE;
 }
 
 ClapTrap::ClapTrap(const ClapTrap& copy) {
