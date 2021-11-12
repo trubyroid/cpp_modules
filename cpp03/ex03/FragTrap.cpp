@@ -4,11 +4,11 @@
 # define DEFAULT_DAMAGE 30
 
 FragTrap::FragTrap () : ClapTrap() {
-	std::cout << "Unknown FragTrap appeared on the battlefield, but he's too weak to participate the battle!\n";
+	std::cout << "Unknown FragTrap appeared on the battlefield!\n";
 	name = "Unknown Frag";
-	health = 1;
-	energy = 0;
-	damage = 0;
+	health = MAX_HEALTH;
+	energy = MAX_ENERGY;
+	damage = DEFAULT_DAMAGE;
 }
 
 FragTrap::FragTrap (std::string str) : ClapTrap(str) {

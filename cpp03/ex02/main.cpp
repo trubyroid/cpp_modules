@@ -9,10 +9,7 @@ int main() {
 	dino.takeDamage(gorilla.getDamage());
 	std::cout << std::endl;
 	FragTrap monkey(gorilla);
-	monkey.attack(dino.getName());
 	monkey.highFivesGuys();
-	monkey.attack(dino.getName());
-	dino.takeDamage(monkey.getDamage());
 	monkey.attack(dino.getName());
 	dino.takeDamage(monkey.getDamage());
 	monkey.attack(dino.getName());

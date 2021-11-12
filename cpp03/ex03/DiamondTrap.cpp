@@ -2,7 +2,8 @@
 
 DiamondTrap::DiamondTrap() : ClapTrap(), ScavTrap(), FragTrap() {
 	std::cout << "Unknown DiamondTrap appeared on the battlefield, but he's too weak to participate the battle!\n";
-	name = "Unknown Diamond"; 
+	name = "Unknown Diamond";
+	ClapTrap::name = name + "_clap_name";
     health = FragTrap::health;
     energy = ScavTrap::energy;
     damage = FragTrap::damage;
@@ -11,10 +12,10 @@ DiamondTrap::DiamondTrap() : ClapTrap(), ScavTrap(), FragTrap() {
 DiamondTrap::DiamondTrap(std::string str) : ClapTrap(str + "_clap_name"), ScavTrap(str), FragTrap(str) {
     ClapTrap::name = str + "_clap_name";
     std::cout << "DiamondTrap " << str << " appeared on the battlefield!\n";
-    name = str;
-    health = FragTrap::health;
-    energy = ScavTrap::energy;
-    damage = FragTrap::damage;
+    this->name = str;
+    this->health = FragTrap::health;
+    this->energy = ScavTrap::energy;
+    this->damage = FragTrap::damage;
 }
 
 DiamondTrap::DiamondTrap(const DiamondTrap& copy) : ClapTrap(copy) {

@@ -1,6 +1,6 @@
 #include "ScavTrap.hpp"
-# define MAX_ENERGY 50
 # define MAX_HEALTH 100
+# define MAX_ENERGY 50
 # define DEFAULT_DAMAGE 20
 
 ScavTrap::ScavTrap () : ClapTrap() {
@@ -40,7 +40,7 @@ ScavTrap& ScavTrap::operator=(const ScavTrap &obj) {
 }
 
 void ScavTrap::guardGate() {
-	std::cout << "From now on ScavTrap " << name << " in Gate keeper mode.\n";
+	std::cout << "From now on ScavTrap " << name << " in a Gate keeper mode.\n";
 }
 
 void ScavTrap::attack(std::string const &target) {

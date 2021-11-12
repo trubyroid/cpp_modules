@@ -4,11 +4,6 @@
 # include "ClapTrap.hpp"
 
 class ScavTrap: virtual public ClapTrap {
-	protected:
-		std::string name;
-		unsigned int health;
-		unsigned int energy;
-		unsigned int damage;
 	public:
 		ScavTrap();
 		ScavTrap(std::string str);
@@ -16,6 +11,7 @@ class ScavTrap: virtual public ClapTrap {
 		~ScavTrap();
 		ScavTrap& operator = (const ScavTrap& obj);
 		void guardGate();
+		void attack(std::string const &target);
 };
 
 #endif

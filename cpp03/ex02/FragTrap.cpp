@@ -1,6 +1,6 @@
 #include "FragTrap.hpp"
-# define MAX_ENERGY 100
 # define MAX_HEALTH 100
+# define MAX_ENERGY 100
 # define DEFAULT_DAMAGE 30
 
 FragTrap::FragTrap () : ClapTrap() {

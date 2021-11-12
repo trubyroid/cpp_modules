@@ -1,6 +1,6 @@
 #include "ScavTrap.hpp"
-# define MAX_ENERGY 50
 # define MAX_HEALTH 100
+# define MAX_ENERGY 50
 # define DEFAULT_DAMAGE 20
 
 ScavTrap::ScavTrap () : ClapTrap() {

@@ -4,11 +4,6 @@
 # include "ClapTrap.hpp"
 
 class FragTrap: virtual public ClapTrap {
-	protected:
-		std::string name;
-		unsigned int health;
-		unsigned int energy;
-		unsigned int damage;
 	public:
 		FragTrap();
 		FragTrap(std::string str);

@@ -4,19 +4,19 @@
 # define DEFAULT_DAMAGE 0
 
 ClapTrap::ClapTrap() {
-	std::cout << "Unknown ClapTrap appeared on the battlefield, but he's too weak to participate the battle!\n";
+	std::cout << "Unknown ClapTrap appeared on the battlefield!\n";
 	name = "Unknown Clap";
-	health = 1;
-	energy = 0;
-	damage = 0;
+	health = MAX_HEALTH;
+	energy = MAX_ENERGY;
+	damage = DEFAULT_DAMAGE;
 }
 
 ClapTrap::ClapTrap(std::string str) {
 	std::cout << "ClapTrap " << str << " appeared on the battlefield!\n";
-	this->name = str;
-	this->health = MAX_HEALTH;
-	this->energy = MAX_ENERGY;
-	this->damage = DEFAULT_DAMAGE;
+	name = str;
+	health = MAX_HEALTH;
+	energy = MAX_ENERGY;
+	damage = DEFAULT_DAMAGE;
 }
 
 ClapTrap::ClapTrap(const ClapTrap& copy) {
@@ -50,11 +50,11 @@ void ClapTrap::attack(std::string const &target) {
 
 void ClapTrap::takeDamage(unsigned int amount) {
 	if (amount >= health) {
-		std::cout << this->name << " take damage! " << amount << " HP lost. He's defeated!\n";
+		std::cout << name << " take damage! " << amount << " HP lost. He's defeated!\n";
 		health = 0;
 	}
 	else {
-		std::cout << this->name << " take damage! " << amount << " HP lost.\n";
+		std::cout << name << " take damage! " << amount << " HP lost.\n";
 		health -= amount;
 	}
 }

@@ -1,6 +1,6 @@
 #include "ClapTrap.hpp"
-# define MAX_ENERGY 10
 # define MAX_HEALTH 10
+# define MAX_ENERGY 10
 # define DEFAULT_DAMAGE 0
 
 ClapTrap::ClapTrap() {
