@@ -5,6 +5,7 @@
 #include "ScavTrap.hpp"
 
 class DiamondTrap: public FragTrap, public ScavTrap {
+	protected:
         std::string name;
         unsigned int health;
         unsigned int energy;

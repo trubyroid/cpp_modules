@@ -8,7 +8,7 @@ DiamondTrap::DiamondTrap() : ClapTrap(), ScavTrap(), FragTrap() {
     damage = FragTrap::damage;
 }
 
-DiamondTrap::DiamondTrap(std::string str) : ClapTrap(str + "_clap_name") {
+DiamondTrap::DiamondTrap(std::string str) : ClapTrap(str + "_clap_name"), ScavTrap(str), FragTrap(str) {
     ClapTrap::name = str + "_clap_name";
     std::cout << "DiamondTrap " << str << " appeared on the battlefield!\n";
     name = str;

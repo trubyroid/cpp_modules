@@ -29,7 +29,7 @@ class ClapTrap {
 		void setEnergy(int value);
 		void setDamage(int value);
 
-		void attack(std::string const &target);
+		virtual void attack(std::string const &target);
 		void takeDamage(unsigned int amount);
 };
 
