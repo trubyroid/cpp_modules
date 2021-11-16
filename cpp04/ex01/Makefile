@@ -1,4 +1,4 @@
-NAME = 
+NAME = Brain
 
 FILES = $(wildcard *.cpp)
 HEADER = $(wildcard *.hpp)
