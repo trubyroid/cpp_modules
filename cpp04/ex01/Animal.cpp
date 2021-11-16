@@ -40,5 +40,5 @@ void Animal::setIdeaToBrain(std::string str) const {
 }
 
 std::string Animal::getIdeaFromBrain(int i) const {
-	return ("FUCK");
+	return ("FUCK\n");
 }
