@@ -6,7 +6,11 @@
 class Cat: public Animal {
 	public:
 		Cat();
+		Cat(const Cat& copy);
 		~Cat();
+
+		Cat& operator = (const Cat& obj);
+
 		void makeSound() const;
 };
 

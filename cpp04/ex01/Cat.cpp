@@ -12,6 +12,7 @@ void Cat::makeSound () const {
 
 Cat::Cat(const Cat& copy) {
 	std::cout << "Copy Cat construcor called.\n";
+	mozg = new Brain();
 	this->operator=(copy);
 }
 
@@ -22,14 +23,10 @@ Cat::~Cat () {
 
 Cat& Cat::operator = (const Cat& obj) {
 	type = obj.getType();
-	mozg->setIdeas(obj.mozg->getIdeas());
+	*mozg = *obj.mozg;
 	return *this;
 }
 
-void Cat::setIdeaToBrain (std::string str) const {
-	mozg->setIdea(str, 0);
-}
-
-std::string Cat::getIdeaFromBrain (int i) const {
-	return (mozg->getIdea(i));
+Brain *Cat::getBrain() {
+	return (mozg);
 }

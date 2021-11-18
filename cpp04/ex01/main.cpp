@@ -5,13 +5,28 @@
 
 int main()
 {
-	const Animal* j = new Dog();
-	const Animal* i = new Cat();
+	int iterator = 30;
+	const Animal* array[iterator];
 
-	i->setIdeaToBrain("I can fly!\n");
-	Animal k = *i;
-	std::cout << k.getIdeaFromBrain(0);
+	for (int i = 0; i != iterator; i++) {
+		array[i++] = new Cat();
+		array[i] = new Dog();
+	}
+	for (int i = 0; i != iterator; i++) {
+		delete array[i];
+	}
+	Cat kotya;
+	Dog sobanya;
+	Brain *mozg;
+	std::string *idea;
+	int o = 77;
 
-	delete j;
-	delete i;
+	mozg = sobanya.getBrain();
+	mozg->setIdea("NEW IDEA!!", o);
+
+	Dog new_sobanya(sobanya);
+	
+	mozg = new_sobanya.getBrain();
+	idea = mozg->getIdea(o);
+	std::cout << *idea << std::endl;
 }

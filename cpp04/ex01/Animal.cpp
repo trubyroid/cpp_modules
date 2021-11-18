@@ -34,11 +34,3 @@ void Animal::setType(std::string str) {
 void Animal::makeSound () const {
 	std::cout << "Unknown animal says: * UNREADABLE NOISE *\n";
 }
-
-void Animal::setIdeaToBrain(std::string str) const {
-	return ;
-}
-
-std::string Animal::getIdeaFromBrain(int i) const {
-	return ("FUCK\n");
-}

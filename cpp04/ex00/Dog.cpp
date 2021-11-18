@@ -6,9 +6,19 @@ Dog::Dog () {
 }
 
 void Dog::makeSound () const {
-	std::cout << "WOV WOV WOV !!\n";
+	std::cout << "Dog says: WOV WOV WOV !!\n";
+}
+
+Dog::Dog(const Dog& copy) {
+	std::cout << "Copy Dog construcor called.\n";
+	this->operator=(copy);
 }
 
 Dog::~Dog () {
-	std::cout << "Dog left the chat.\n";
+	std::cout << "Dog left the chat. ";
+}
+
+Dog& Dog::operator = (const Dog& obj) {
+	type = obj.getType();
+	return *this;
 }

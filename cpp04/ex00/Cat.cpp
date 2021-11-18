@@ -6,9 +6,19 @@ Cat::Cat () {
 }
 
 void Cat::makeSound () const {
-	std::cout << "MEEEEOOOOOOWW !!\n";
+	std::cout << "Cat says: MEEEEOOOOOOWW !!\n";
+}
+
+Cat::Cat(const Cat& copy) {
+	std::cout << "Copy Cat construcor called.\n";
+	this->operator=(copy);
 }
 
 Cat::~Cat () {
-	std::cout << "Cat left the chat.\n";
+	std::cout << "Cat left the chat. ";
+}
+
+Cat& Cat::operator = (const Cat& obj) {
+	type = obj.getType();
+	return *this;
 }

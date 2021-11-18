@@ -15,7 +15,7 @@ Animal::Animal (const Animal& copy) {
 }
 
 Animal::~Animal () {
-	std::cout << type << " left the chat.\n";
+	std::cout << "Unknown animal destructor called.\n";
 }
 
 Animal& Animal::operator = (const Animal& obj) {
@@ -32,5 +32,5 @@ void Animal::setType(std::string str) {
 }
 
 void Animal::makeSound () const {
-	std::cout << "* UNREADABLE NOISE *\n";
+	std::cout << "Unknown animal says: * UNREADABLE NOISE *\n";
 }

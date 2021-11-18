@@ -12,6 +12,7 @@ void Dog::makeSound () const {
 
 Dog::Dog(const Dog& copy) {
 	std::cout << "Copy Dog construcor called.\n";
+	mozg = new Brain;
 	this->operator=(copy);
 }
 
@@ -22,6 +23,10 @@ Dog::~Dog () {
 
 Dog& Dog::operator = (const Dog& obj) {
 	type = obj.getType();
-	mozg->setIdeas(obj.mozg->getIdeas());
+	*mozg = *obj.mozg;
 	return *this;
+}
+
+Brain *Dog::getBrain() {
+	return (mozg);
 }
