@@ -1,4 +1,4 @@
-NAME = 
+NAME = Abstract
 
 FILES = $(wildcard *.cpp)
 HEADER = $(wildcard *.hpp)
