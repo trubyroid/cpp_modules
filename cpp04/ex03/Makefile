@@ -1,9 +1,9 @@
-NAME = 
+NAME = AMateria
 
 FILES = $(wildcard *.cpp)
 HEADER = $(wildcard *.hpp)
 O_FILES = $(FILES:.cpp=.o)
-FLAGS = -Wall -Wextra -Werror -std=c++98
+FLAGS = -Wall -W -Werror -std=c++98
 
 all: $(NAME)
 

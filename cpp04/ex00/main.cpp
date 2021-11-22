@@ -25,5 +25,4 @@ int main()
 	delete meta;
 	delete iWrong;
 	delete metaWrong;
-
 }
