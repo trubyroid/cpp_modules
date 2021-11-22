@@ -10,6 +10,7 @@ int main() {
 	std::cout << std::endl;
 	DiamondTrap monkey(gorilla);
 	monkey.highFivesGuys();
+	monkey.guardGate();
 	gorilla.attack(dino.getName());
 	dino.takeDamage(gorilla.getDamage());
 	gorilla.attack(dino.getName());
