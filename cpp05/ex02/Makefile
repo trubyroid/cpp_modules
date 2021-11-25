@@ -1,4 +1,4 @@
-NAME = 
+NAME = Forms
 
 FILES = $(wildcard *.cpp)
 HEADER = $(wildcard *.hpp)
