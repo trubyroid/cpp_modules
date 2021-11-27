@@ -1,4 +1,4 @@
-NAME = 
+NAME = Intern
 
 FILES = $(wildcard *.cpp)
 HEADER = $(wildcard *.hpp)
