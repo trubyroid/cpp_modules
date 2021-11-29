@@ -1,7 +1,7 @@
 #include <iostream>
 
 void exception(std::string string);
-int printAll(std::string string, double result);
+int printAll(double result);
 
 int error(std::string str) {
     std::cout << "Error: " << str;
@@ -41,11 +41,11 @@ int isError(std::string &string, double &result) {
 int check_n_print(int argc, char **argv) {
     std::string string(argv[1]);
     double result;
-    if (isException(string));
+    if (isException(string))
         return (1);
     if (isError(string, result))
         error("invalid input.\n");
-    return (printAll(string, result));
+    return (printAll(result));
 }
 
 int main(int argc, char **argv) {
