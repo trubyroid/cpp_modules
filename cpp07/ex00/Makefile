@@ -1,4 +1,4 @@
-NAME = a.out
+NAME = whatever
 
 FILES = $(wildcard *.cpp)
 HEADER = $(wildcard *.hpp)

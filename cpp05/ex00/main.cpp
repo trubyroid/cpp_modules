@@ -14,14 +14,12 @@ int main ()
 	}
 	{
 		std::cout << "______________________________________\n";
-		Bureaucrat office_worker("Plankton", 1);
+		Bureaucrat office_worker("Plankton", 150);
 
 		std::cout << office_worker << std::endl;
-		for (int i = 0; i != 150; i++) {
-			try {office_worker.decGrade();}
-			catch (std::exception& exc) {
+		try {office_worker.decGrade();}
+		catch (std::exception& exc) {
 			std::cout << "Error: " << exc.what();
-			}
 		}
 		std::cout << office_worker << std::endl;
 	}

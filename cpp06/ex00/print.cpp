@@ -9,7 +9,7 @@ void exception(std::string string) {
 
 void printChar(unsigned char c) {
     std::cout << "char: ";
-    if (c < 33 || c > 126)
+    if (c < 32 || c > 126)
         std::cout << "Can't display\n";
     else
         std::cout << "'" << c << "'\n";
@@ -40,4 +40,5 @@ int printAll(double result) {
     printInt(static_cast<int>(result));
     printFloat(static_cast<float>(result));
     printDouble(result);
+    return (0);
 }

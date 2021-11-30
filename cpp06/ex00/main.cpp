@@ -11,9 +11,11 @@ int error(std::string str) {
 int isException(std::string string) {
     if (string == "nanf" || string == "+inff" || string == "-inff")
         exception(string.erase(string.size() - 1, 1));
-    if (string == "nan" || string == "+inf" || string == "-inf")
+    else if (string == "nan" || string == "+inf" || string == "-inf")
         exception(string);
-    return (0);
+    else
+        return (0);
+    return (1);
 }
 
 int isError(std::string &string, double &result) {
@@ -42,7 +44,7 @@ int check_n_print(int argc, char **argv) {
     std::string string(argv[1]);
     double result;
     if (isException(string))
-        return (1);
+        return (0);
     if (isError(string, result))
         error("invalid input.\n");
     return (printAll(result));

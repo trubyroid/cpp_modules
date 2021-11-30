@@ -1,4 +1,4 @@
-NAME = a.out
+NAME = iter
 
 FILES = $(wildcard *.cpp)
 HEADER = $(wildcard *.hpp)
