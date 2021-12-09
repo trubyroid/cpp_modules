@@ -24,13 +24,12 @@ class MutantStack: public std::stack<T> {
         iterator end() {
             return (this->c.end());
         }
-        iterator cbegin() {
+        const_iterator cbegin() {
             return (this->c.cbegin());
         }
-        iterator cend() {
+        const_iterator cend() {
             return (this->c.cend());
         }
-
 };
 
 #endif

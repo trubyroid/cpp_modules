@@ -3,6 +3,8 @@
 
 #include <iostream>
 #include <vector>
+#include <list>
+#include <set>
 
 class errorNotFound: public std::exception {
     virtual const char *what() const throw() {return ("Error: symbol was not found.\n");};

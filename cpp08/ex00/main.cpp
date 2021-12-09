@@ -1,7 +1,4 @@
 #include "easyfind.hpp"
-#include <vector>
-#include <list>
-#include <set>
 
 int main() {
     std::cout << "Cases with vectors:\n";
